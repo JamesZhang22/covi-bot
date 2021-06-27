@@ -18,9 +18,14 @@ dataset.download()
 dataset.parse()
 dataset.nlp()
 dataset_text = dataset.text
+dataset2 = Article('https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/symptoms.html')
+dataset2.download()
+dataset2.parse()
+dataset2.nlp()
+dataset_text2 = dataset.text
 
 # Tokenization
-text = dataset_text
+text = dataset_text + dataset_text2
 sentence_list = nltk.sent_tokenize(text)
 
 # Index Sort
